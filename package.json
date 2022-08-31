@@ -2,14 +2,14 @@
   "name": "parcel-project-template",
   "version": "2.0.0",
   "description": "",
-  "homepage": "https://VPagent.github.io/project-team1",
+  "homepage": "https://VPagent.github.io/Filmoteka",
   "scripts": {
     "start": "parcel src/*.html",
-    "build": "parcel build src/*.html --public-url /project-team1/"
+    "build": "parcel build src/*.html --public-url /Filmoteka/"
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/VPagent/project-team1.git"
+    "url": "git+https://github.com/Zorotool/Filmoteka"
   },
   "keywords": [],
   "author": "Alexander Repeta <alexander.repeta@gmail.com>",
