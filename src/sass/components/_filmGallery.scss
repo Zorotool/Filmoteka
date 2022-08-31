@@ -1,0 +1,124 @@
+.film-gallery {
+  &__list {
+    @media screen and(min-width: $tablet) {
+      display: flex;
+      flex-wrap: wrap;
+    }
+  }
+
+  &__item {
+    transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
+
+    width: 280px;
+    height: 443px;
+    margin-bottom: 20px;
+
+    &:hover {
+      transform: scale(1.05);
+    }
+
+    @media screen and(min-width: $tablet) {
+      width: 336px;
+      height: 495px;
+      margin-bottom: 32px;
+      margin-right: 32px;
+
+      &:nth-last-child(-n + 2) {
+        margin-bottom: 0px;
+      }
+
+      &:nth-child(2n) {
+        margin-right: 0;
+      }
+    }
+
+    @media screen and(min-width: $desktop) {
+      width: 394px;
+      height: 640px;
+      margin-right: 16px;
+
+      &:nth-child(2n) {
+        margin-right: 16px;
+      }
+
+      &:nth-child(3n) {
+        margin-right: 0;
+      }
+
+      &:last-child {
+        margin-right: 0;
+      }
+    }
+
+    &:hover {
+      cursor: pointer;
+    }
+  }
+
+  &__item:last-child {
+    margin-bottom: 0px;
+  }
+
+  &__image-wrapper {
+    width: 100%;
+    filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
+    margin-bottom: 8px;
+
+    @media screen and(min-width: $tablet) {
+      width: 100%;
+    }
+  }
+
+  &__image {
+    width: 280px;
+    border-radius: 5px;
+    height: 398px;
+    object-fit: cover;
+
+    @media screen and(min-width: $tablet) {
+      height: 455px;
+      width: 336px;
+    }
+
+    @media screen and(min-width: $desktop) {
+      width: 394px;
+      height: 574px;
+    }
+  }
+
+  &__info-wrapper {
+    font-size: 12px;
+    line-height: 1.33;
+
+    @media screen and(min-width: $desktop) {
+      font-size: inherit;
+      line-height: inherit;
+    }
+  }
+
+  &__name {
+    font-size: inherit;
+    line-height: inherit;
+    text-transform: uppercase;
+  }
+
+  &__info {
+    display: flex;
+    justify-content: flex-start;
+    font-size: inherit;
+    line-height: inherit;
+    color: $text-color-2;
+
+    &-genres {
+      margin-right: 5px;
+    }
+
+    &-year {
+      margin-left: 5px;
+    }
+
+    &-vote {
+      display: none;
+    }
+  }
+}
